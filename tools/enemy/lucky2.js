@@ -1,4 +1,4 @@
-import { Lucky1 } from "/tools/enemy/lucky1.js";
+import { Lucky1 } from "./lucky1.js";
 
 export class Lucky2 extends Lucky1 {
   constructor(game) {

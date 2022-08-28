@@ -1,20 +1,20 @@
-import { UI } from "/tools/ui.js";
-import { Background } from "/tools/background/background.js";
-import { InputHandler } from "/tools/input.js";
+import { UI } from "./ui.js";
+import { Background } from "./background/background.js";
+import { InputHandler } from "./input.js";
 
-import { Player } from "/tools/player.js";
-import { Enemy1 } from "/tools/enemy/angler1.js";
-import { Enemy2 } from "/tools/enemy/angler2.js";
-import { Enemy3 } from "/tools/enemy/angler3.js";
-import { Enemy4 } from "/tools/enemy/angler4.js";
-import { Enemy5 } from "/tools/enemy/angler5.js";
-import { Drone } from "/tools/enemy/drone.js";
-import { Whale } from "/tools/enemy/whale.js";
-import { Lucky1 } from "/tools/enemy/lucky1.js";
-import { Lucky2 } from "/tools/enemy/lucky2.js";
+import { Player } from "./player.js";
+import { Enemy1 } from "./enemy/angler1.js";
+import { Enemy2 } from "./enemy/angler2.js";
+import { Enemy3 } from "./enemy/angler3.js";
+import { Enemy4 } from "./enemy/angler4.js";
+import { Enemy5 } from "./enemy/angler5.js";
+import { Drone } from "./enemy/drone.js";
+import { Whale } from "./enemy/whale.js";
+import { Lucky1 } from "./enemy/lucky1.js";
+import { Lucky2 } from "./enemy/lucky2.js";
 
-import { SmockExplosion } from "/tools/effects/smock.js";
-import { Particle } from "/tools/effects/particle.js";
+import { SmockExplosion } from "./effects/smock.js";
+import { Particle } from "./effects/particle.js";
 
 export class Game {
   constructor(width, height) {
@@ -50,7 +50,6 @@ export class Game {
   update(deltaTime) {
     this.background.update();
     this.player.update(deltaTime);
-
     if (!this.gameOver) {
       // add enemy
       if (this.enemyTimer > this.EnemyInterval) {

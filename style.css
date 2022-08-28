@@ -10,6 +10,62 @@ body {
   letter-spacing: 4px
 }
 
+#backdrop {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(30px);
+}
+
+#loading {
+  display: flex;
+  align-items: center;
+}
+
+#loading span {
+  display: block;
+  border: 16px solid #2c2b2b;
+  border-top: 16px solid rgba(255, 255, 255, 0.596);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s ease-in infinite;
+}
+
+#loading span:nth-child(2) {
+  animation-delay: 300ms;
+}
+
+#loading span:nth-child(3) {
+  animation-delay: 600ms;
+}
+
+#start {
+  display: none;
+  font-size: 24px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.51);
+}
+
+#start:hover {
+  opacity: 0.7
+}
+
+#start:active {
+  top: 2px;
+  left: 2px
+}
+
 #canvas {
   position: absolute;
   top: 50%;
@@ -35,4 +91,29 @@ body {
 #gears,
 #drone {
   display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  0% {
+    height: 40px;
+  }
+
+  25% {
+    height: 80px;
+    opacity: 1;
+  }
+
+  50% {
+    height: 40px;
+  }
 }

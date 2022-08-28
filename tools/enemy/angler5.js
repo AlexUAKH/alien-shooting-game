@@ -1,4 +1,4 @@
-import { Enemy4 } from "/tools/enemy/angler4.js";
+import { Enemy4 } from "./angler4.js";
 
 export class Enemy5 extends Enemy4 {
   constructor(game) {

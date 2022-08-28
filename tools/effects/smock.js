@@ -1,4 +1,4 @@
-import { Explosion } from "/tools/effects/explosion.js";
+import { Explosion } from "./explosion.js";
 
 export class SmockExplosion extends Explosion {
   constructor(game, x, y) {

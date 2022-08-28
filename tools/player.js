@@ -1,5 +1,5 @@
-import { Bullet1 } from "/tools/bullet/defaultBullet.js";
-import { Bullet2 } from "/tools/bullet/superBullet.js";
+import { Bullet1 } from "./bullet/defaultBullet.js";
+import { Bullet2 } from "./bullet/superBullet.js";
 
 export class Player {
   constructor(game) {

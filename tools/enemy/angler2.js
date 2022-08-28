@@ -1,4 +1,4 @@
-import { EnemyBase } from "/tools/enemy/enemy.js";
+import { EnemyBase } from "./enemy.js";
 
 export class Enemy2 extends EnemyBase {
   constructor(game) {
